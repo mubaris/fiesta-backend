@@ -1,0 +1,52 @@
+{
+  "name": "fiesta-backend",
+  "version": "1.0.0",
+  "description": "fiesta",
+  "keywords": [
+    "loopback-application",
+    "loopback"
+  ],
+  "main": "index.js",
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "clean": "rimraf dist *.tsbuildinfo",
+    "pretest": "npm run clean && npm run build",
+      "migrate": "node ./dist/migrate",
+    "start": "npm run build && node -r source-map-support/register .",
+    "prepare": "npm run build"
+  },
+  "repository": {
+    "type": "git"
+  },
+  "author": "",
+  "license": "",
+  "files": [
+    "README.md",
+    "index.js",
+    "index.d.ts",
+    "dist",
+    "src",
+    "!*/__tests__"
+  ],
+  "dependencies": {
+    "@loopback/boot": "^2.0.2",
+    "@loopback/context": "^3.2.0",
+    "@loopback/core": "^2.2.0",
+    "@loopback/openapi-v3": "^3.1.1",
+    "@loopback/repository": "^2.0.2",
+    "@loopback/rest": "^3.1.0",
+    "@loopback/rest-explorer": "^2.0.2",
+  "tslib": "^1.10.0"
+  },
+  "devDependencies": {
+    "rimraf": "^3.0.2",
+    "source-map-support": "^0.5.16",
+    "@loopback/testlab": "^2.0.2",
+    "@types/node": "^10.17.17",
+    "typescript": "~3.8.3"
+  }
+}
